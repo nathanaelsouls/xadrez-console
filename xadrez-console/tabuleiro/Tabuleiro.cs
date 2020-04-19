@@ -4,15 +4,15 @@ namespace tabuleiro
 {
     class Tabuleiro
     {
-        public int linhas { get; set; }
-        public int colunas { get; set; }
+        public int Linhas { get; set; }
+        public int Colunas { get; set; }
 
         private Peca[,] pecas;
 
         public Tabuleiro(int linhas, int colunas)
         {
-            this.linhas = linhas;
-            this.colunas = colunas;
+            Linhas = linhas;
+            Colunas = colunas;
 
             pecas = new Peca[linhas, colunas];
         }
@@ -20,6 +20,13 @@ namespace tabuleiro
         public Peca Peca(int linha, int coluna)
         {
             return pecas[linha, coluna];
+        }
+
+        public void ColocarPeca(Peca p, Posicao pos)
+        {
+            pecas[pos.Linha, pos.Coluna] = p;
+            p.Posicao = pos;
+
         }
     }
 }
