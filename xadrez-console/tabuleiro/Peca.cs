@@ -14,7 +14,7 @@ namespace tabuleiro
         {
             Posicao = null;
             Tab = tab;
-            Cor = cor;
+            this.Cor = cor;
             QteMovimentos = 0;
         }
 
