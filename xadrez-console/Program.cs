@@ -46,9 +46,10 @@ namespace xadrez_console
                         Console.WriteLine("Serio? Informe isso corretamente!!!");
                         Console.ReadKey();
                     }
-                }
 
-                
+                    Console.Clear();
+                    Tela.ImprimirPartida(partida);
+                }                
 
                 
             }catch(TabuleiroException e)
